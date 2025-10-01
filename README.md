@@ -112,4 +112,20 @@ The microservices must be started in a specific order.
 
 -----
 
-This `README.md` file provides a comprehensive and professional overview of the Spenzr project.
+### Here are some screenshots if the running application:
+
+<img width="3164" height="1968" alt="image" src="https://github.com/user-attachments/assets/538806f8-1b2a-406c-ba73-18c884b55c3e" />
+
+<img width="3164" height="1968" alt="image" src="https://github.com/user-attachments/assets/1db2c469-f8da-4f6c-a400-938a11acaa42" />
+
+<img width="1582" height="984" alt="image" src="https://github.com/user-attachments/assets/01657418-4e32-46a7-9264-a92436e7d20c" />
+
+<img width="1582" height="984" alt="image" src="https://github.com/user-attachments/assets/b6a7c9e6-bfdf-466d-9b9a-e67a2f7a6f2a" />
+
+<img width="1582" height="984" alt="image" src="https://github.com/user-attachments/assets/d5fc14d9-a90f-4f31-b15d-571eb309257b" />
+
+<img width="1582" height="984" alt="image" src="https://github.com/user-attachments/assets/b38c9d4a-c1a3-4f71-85b5-ef785860b0d0" />
+
+<img width="1582" height="984" alt="image" src="https://github.com/user-attachments/assets/d35c2acc-d54f-4069-8312-6277797f8c59" />
+
+<img width="1582" height="984" alt="image" src="https://github.com/user-attachments/assets/8e770d9a-ddf2-4864-89fc-928700fcf43e" />
