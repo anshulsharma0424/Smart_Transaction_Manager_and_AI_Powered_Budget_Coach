@@ -1,0 +1,9 @@
+Spring Cloud Config Server
+
+- This service will act as a centralized hub for managing the configuration properties of all other microservices in our application.
+- This prevents us from scattering configuration files across different services and allows us to change configurations without redeploying them.
+
+"spring-cloud-config-server": The core dependency that turns our application into a Config Server.
+
+"spring-cloud-starter-netflix-eureka-client": This is included so that the Config Server itself can register with Eureka, making it discoverable by other services.
+

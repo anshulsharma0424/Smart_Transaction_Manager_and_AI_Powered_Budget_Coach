@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: suggestion-service
+  config:
+    import: "optional:configserver:http://localhost:8888"

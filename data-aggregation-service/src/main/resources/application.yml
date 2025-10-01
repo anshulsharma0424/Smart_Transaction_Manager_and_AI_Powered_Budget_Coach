@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: data-aggregation-service
+  config:
+    import: "optional:configserver:http://localhost:8888"

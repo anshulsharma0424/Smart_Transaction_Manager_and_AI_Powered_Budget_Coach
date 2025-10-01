@@ -1,0 +1,20 @@
+# This file configures the Eureka server's behavior.
+# We'll set the application name and port, and most importantly, we'll tell the server not to try and register itself as a client.
+
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    # A standalone Eureka server should not register itself with the registry.
+    register-with-eureka: false
+    # A standalone Eureka server does not need to fetch registry information from another server.
+    fetch-registry: false
+  server:
+    # In a production environment with multiple Eureka nodes, you would set this to false.
+    # For a single dev instance, true is fine to prevent peer awareness exceptions on startup.
+    wait-time-in-ms-when-sync-empty: 0

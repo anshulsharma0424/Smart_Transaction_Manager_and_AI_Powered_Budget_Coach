@@ -1,0 +1,14 @@
+API Gateway
+
+- This service will be the single entry point for all incoming requests from the client (our React.js frontend).
+- It's responsible for routing requests to the appropriate downstream microservice, and it can also handle concerns like security, rate limiting, and logging.
+
+We will use 'Spring Cloud Gateway' for this. It will fetch its configuration from the Config Server and discover other services using the Eureka Server.
+
+"spring-cloud-starter-gateway": Provides the core Spring Cloud Gateway functionality.
+
+"spring-cloud-starter-netflix-eureka-client": Allows the gateway to find other services via Eureka.
+
+"spring-cloud-starter-config": Enables the gateway to fetch its configuration from the Config Server.
+
+"spring-boot-starter-actuator": Useful for monitoring and managing the gateway (e.g., viewing configured routes).

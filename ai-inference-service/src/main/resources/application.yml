@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ai-inference-service
+  config:
+    import: "optional:configserver:http://localhost:8888"

@@ -1,0 +1,6 @@
+"spring-boot-starter-parent": Provides default configurations and dependency management for a Spring Boot project.
+
+"spring-cloud-starter-netflix-eureka-server": This is the key dependency that includes all the necessary libraries to run a Eureka server.
+
+"spring-cloud-dependencies": This is a Bill of Materials (BOM) that manages the versions of all Spring Cloud libraries to ensure they are compatible.
+

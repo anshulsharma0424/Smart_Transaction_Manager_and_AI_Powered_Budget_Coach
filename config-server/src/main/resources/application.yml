@@ -1,0 +1,19 @@
+server:
+  port: 8888 # Default port for Spring Cloud Config Server
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/anshulsharma0424/spenzr-config-repo.git # It points to the Git repository you created earlier. The server will clone this repository to serve the configuration files within it.
+          clone-on-start: true # Ensures the repository is cloned when the server starts up.
+          default-label: main
+
+# Configuration for registering this service with Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ # Tells the Config Server where to find the Eureka server to register itself.

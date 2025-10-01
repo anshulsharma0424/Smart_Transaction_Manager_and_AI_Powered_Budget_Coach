@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: api-gateway
+  config:
+    # This is the new, required property to connect to the Config Server.
+    # 'optional:' makes startup succeed even if the config server is not available.
+    import: "optional:configserver:http://localhost:8888"
+
+# Note: All other configuration for the gateway (ports, routes, etc.)
+# still comes from the 'api-gateway.yml' file in your Git config repository.
+# This file just tells the service HOW to find that configuration.
