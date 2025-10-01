@@ -34,8 +34,6 @@ Spenzr is built on a distributed, granular microservices architecture to ensure 
 [Plan.pdf](https://github.com/user-attachments/files/22644516/Plan.pdf)
 
 
-```
-
 ## 🛠️ Technology Stack
 
 | Category         | Technology                                                                          |
