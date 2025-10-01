@@ -1,8 +1,3 @@
-Of course. A great project deserves a great `README.md` file. This file will serve as the front door to your project on GitHub, explaining what it is, its features, its architecture, and how to run it.
-
-Here is a complete, professional `README.md` file for your Spenzr application.
-
------
 
 # Spenzr: Smart Transaction Manager & AI Budget Coach 💸
 
@@ -124,11 +119,11 @@ Follow these steps to get the entire Spenzr application running on your local ma
   * Node.js & npm
   * Docker & Docker Compose
 
-### 1\. Clone the Repositories
+### 1. Clone the Repositories
 
 You will need to clone the main repository containing all the services and your separate configuration repository.
 
-### 2\. Configure Secrets
+### 2. Configure Secrets
 
 The application requires a **Google Gemini API Key**.
 
@@ -138,7 +133,7 @@ The application requires a **Google Gemini API Key**.
     export GOOGLE_API_KEY="your-real-api-key-here"
     ```
 
-### 3\. Backend Startup Order
+### 3. Backend Startup Order
 
 The microservices must be started in a specific order.
 
@@ -151,7 +146,7 @@ The microservices must be started in a specific order.
 3.  **Start All Other Backend Services:**
       * You can now start all the other backend microservices in any order (`user-service`, `transaction-service`, etc.).
 
-### 4\. Frontend Setup
+### 4. Frontend Setup
 
 1.  **Navigate to the frontend directory:**
     ```bash
