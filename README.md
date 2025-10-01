@@ -31,68 +31,9 @@ The application is divided into three core modules:
 
 Spenzr is built on a distributed, granular microservices architecture to ensure loose coupling, scalability, and independent development. All services are registered with a discovery server and communicate via an API Gateway or an asynchronous message broker.
 
-```mermaid
-graph TD
-    subgraph Frontend
-        ReactApp[React.js Frontend]
-    end
+[Plan.pdf](https://github.com/user-attachments/files/22644516/Plan.pdf)
 
-    subgraph Infrastructure
-        Gateway[API Gateway]
-        Eureka[Eureka Discovery Server]
-        Config[Config Server]
-        Kafka[Apache Kafka]
-        Keycloak[Keycloak Auth Server]
-    end
 
-    subgraph "Part A: Personal Finance"
-        UserService[User Service <br> (PostgreSQL)]
-        TransactionService[Transaction Service <br> (PostgreSQL)]
-        CategoryService[Category Service <br> (MongoDB)]
-        ReportingService[Reporting Service]
-        UserPreferenceService[User Preference Service <br> (PostgreSQL)]
-    end
-
-    subgraph "Part B: Group Expenses"
-        EventService[Event Service <br> (MongoDB)]
-        GroupExpenseService[Group Expense Service <br> (MongoDB)]
-        SettlementService[Settlement Service]
-    end
-
-    subgraph "Part C: AI Coach"
-        DataAggregationService[Data Aggregation Service]
-        AIInferenceService[AI Inference Service <br> (Gemini API)]
-        SuggestionService[Suggestion Service <br> (MongoDB)]
-    end
-
-    ReactApp -- REST API --> Gateway;
-    Gateway -- REST API --> UserService;
-    Gateway -- REST API --> TransactionService;
-    Gateway -- REST API --> CategoryService;
-    Gateway -- REST API --> ReportingService;
-    Gateway -- REST API --> UserPreferenceService;
-    Gateway -- REST API --> EventService;
-    Gateway -- REST API --> GroupExpenseService;
-    Gateway -- REST API --> SettlementService;
-    Gateway -- REST API --> SuggestionService;
-
-    TransactionService -- Publishes Event --> Kafka;
-    GroupExpenseService -- Publishes Event --> Kafka;
-    Kafka -- Consumes Event --> DataAggregationService;
-    DataAggregationService -- REST API --> AIInferenceService;
-    DataAggregationService -- REST API --> SuggestionService;
-    
-    SettlementService -- REST API --> GroupExpenseService;
-    ReportingService -- REST API --> TransactionService;
-    EventService -- REST API --> UserService;
-
-    classDef db fill:#E8E8E8,stroke:#333,stroke-width:2px;
-    class UserService,TransactionService,UserPreferenceService,CategoryService,EventService,GroupExpenseService,SuggestionService db;
-
-    %% Service Discovery Links
-    UserService & TransactionService & CategoryService & ReportingService & UserPreferenceService & EventService & GroupExpenseService & SettlementService & DataAggregationService & AIInferenceService & SuggestionService & Gateway & Config -- Registers with --> Eureka;
-    %% Configuration Links
-    UserService & TransactionService & CategoryService & ReportingService & UserPreferenceService & EventService & GroupExpenseService & SettlementService & DataAggregationService & AIInferenceService & SuggestionService & Gateway -- Fetches Config --> Config;
 ```
 
 ## 🛠️ Technology Stack
